@@ -1,0 +1,23 @@
+# collecting users input 
+while guess_count != 3:
+    question_one = random.randint(10, 99)
+    question_two = random.randint(10, 99)
+    summation = input("what is " + str(question_one) + " + " + str(question_two) + "?" " ")
+    score = question_one + question_two
+    
+    # setting condition 
+    if int(sum) == score:
+        guess_count += 1
+        guess_correct +=1
+        print(f'your answer is {sum}')
+        print(f"Correct! you've gotten {guess_count} correct in a row")
+    elif int(sum) != score:
+        guess_count *=0
+        guess_wrong += 1
+        print(f'Your answer {sum}')
+        print(f'Incorrect. The expected answer is: {score}')
+    else:
+        print('it is ok ')
+
+    if guess_count == 3:
+        print('Well done! You mastered addition')

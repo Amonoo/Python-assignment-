@@ -1,0 +1,26 @@
+# random number guessing game
+from random import randint
+guesses = 1
+number = randint(1, 99)
+guess = int(input("Guess a number between 1 and 99. "))
+
+# collecting user input
+while guess != number:
+
+    # setting condition
+    if guess < number:
+        print('Your guess is too low: try again')
+        guess = int(input("Guess again: "))
+        guesses = guesses + 1
+    elif guess > number :
+        print('Your guess is too high')
+        guess = int(input("Guess again: "))
+        guesses = guesses +1
+    else:
+        print('Your guess is not a number ')
+
+
+
+
+print()
+print('Congrats! you have guess the right number ')  
